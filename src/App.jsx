@@ -33,7 +33,12 @@ const Navbar = () => (
       <a className="btn btn-ghost font-bold rounded-full text-gray-700 hover:text-white">
         Login
       </a>
-      <a className="btn btn-primary rounded-full px-8 text-white shadow-lg shadow-primary/20 font-bold border-none">
+      <a
+        className="btn bg-linear-to-r from-blue-700 to-purple-600 
+hover:from-purple-600 hover:to-pink-500 
+rounded-full px-8 text-white font-bold border-none
+shadow-lg shadow-primary/20 transition-all duration-300"
+      >
         Get Started
       </a>
     </div>
@@ -60,7 +65,13 @@ const Hero = () => (
           Explore Products
         </p>
         <div className="flex items-center gap-6">
-          <button className="btn btn-primary rounded-full px-10 h-14 text-white shadow-2xl shadow-primary/30 border-none font-bold text-lg">
+          <button
+            className="btn bg-linear-to-r from-blue-700 to-purple-600 
+rounded-full px-10 h-14 text-white font-bold text-lg border-none
+shadow-[0_0_15px_rgba(99,102,241,0.6)] 
+hover:shadow-[0_0_25px_rgba(99,102,241,0.9)] 
+hover:scale-105 transition-all duration-300"
+          >
             Explore Products
           </button>
           <button className="px-2 h-14 flex items-center font-bold text-blue-700 hover:bg-blue-700 border border-blue-700 rounded-full group transition-all duration-300 hover:bg-linear-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white hover:border-transparent">
@@ -87,9 +98,63 @@ const Hero = () => (
   </section>
 );
 
+const Stats = () => (
+  <section
+    className="bg-linear-to-r from-blue-700 to-purple-600 py-16"
+    style={{ fontFamily: "Inter, sans-serif" }}
+  >
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center text-white">
+        <div className="space-y-2">
+          <div className="text-5xl font-black tracking-tighter">50K+</div>
+          <p className="text-primary-content font-bold uppercase tracking-widest text-xs opacity-80">
+            Active Users
+          </p>
+        </div>
+        <div className="space-y-2">
+          <div className="text-5xl font-black tracking-tighter">200+</div>
+          <p className="text-primary-content font-bold uppercase tracking-widest text-xs opacity-80">
+            Premium Tools
+          </p>
+        </div>
+        <div className="space-y-2">
+          <div className="text-5xl font-black tracking-tighter">4.9</div>
+          <p className="text-primary-content font-bold uppercase tracking-widest text-xs opacity-80">
+            Rating
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
-
-
+const CTA = () => (
+  <section
+    className="bg-linear-to-r from-blue-700 to-purple-600"
+    style={{ fontFamily: "Inter, sans-serif" }}
+  >
+    <div className="px-8 py-20 md:p-24 text-center text-white relative overflow-hidden group shadow-3xl shadow-primary/50">
+      <h2 className="text-2xl md:text-6xl font-extrabold mb-8 relative z-10 tracking-tighter leading-tight">
+        Ready To Transform Your Workflow?
+      </h2>
+      <p className="text-primary-content text-lg mb-8 max-w-2xl mx-auto relative z-10 opacity-90 leading-relaxed">
+        Join thousands of professionals who are already using Digitools to work
+        smarter. Start your free trial today.
+      </p>
+      <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+        <button className="btn bg-white text-primary border-none hover:bg-gray-100 rounded-full h-14 px-6 text-lg shadow-2xl">
+          Explore Products
+        </button>
+        <button className="btn btn-outline border-white/30 text-white hover:bg-white/10 hover:border-white rounded-full h-14 px-6 text-lg transition-all">
+          View Pricing
+        </button>
+      </div>
+      <div className="mt-6 text-white/40 text-md">
+        14-day free trial • No credit card required • Cancel anytime
+      </div>
+    </div>
+  </section>
+);
 
 const Footer = () => (
   <footer
@@ -99,9 +164,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
         <div className="lg:col-span-2">
-          <a className="text-3xl font-black text-white mb-8 block">
-            DigiTools
-          </a>
+          <a className="text-3xl font-black text-white mb-8 block">DigiTools</a>
           <p className="text-white/40 leading-relaxed font-bold text-base max-w-sm mb-10">
             Access premium AI tools, design assets, and statistics and
             productivity software all in one place. Start creating today for
@@ -224,6 +287,8 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Stats />
+        <CTA />
       </main>
       <Footer />
     </div>
