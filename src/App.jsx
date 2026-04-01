@@ -128,13 +128,250 @@ const Stats = () => (
   </section>
 );
 
+const Steps = () => (
+  <section
+    className="py-32 bg-white"
+    style={{ fontFamily: "Inter, sans-serif" }}
+  >
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="text-center mb-10">
+        <h2 className="text-5xl font-semibold text-gray-900 mb-6 tracking-tighter">
+          Get Started In 3 Steps
+        </h2>
+        <p className="text-gray-500 max-w-xl mx-auto text-lg">
+          Start using premium digital tools in minutes, not hours.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {[
+          {
+            title: "Create Account",
+            desc: "Sign up for a free account if you want to get started.",
+            icon: "user.png",
+            num: "01",
+          },
+          {
+            title: "Choose Products",
+            desc: "Browse our catalog and select the products you need.",
+            icon: "package.png",
+            num: "02",
+          },
+          {
+            title: "Start Creating",
+            desc: "Launch into creating using our premium house of facilities.",
+            icon: "rocket.png",
+            num: "03",
+          },
+        ].map((s, i) => (
+          <div
+            key={i}
+            className="bg-white p-12 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 relative group overflow-hidden shadow-sm"
+          >
+            <div className="absolute top-8 right-8">
+              <span className="w-10 h-10 rounded-full bg-linear-to-r from-blue-700 to-purple-600 text-white flex items-center justify-center font-black text-sm">
+                {s.num}
+              </span>
+            </div>
+            <div className="w-24 h-24 rounded-full bg-primary/5 flex items-center justify-center mb-10 mx-auto ring-1 ring-primary/10 group-hover:scale-110 transition-transform duration-500 hover:bg-white hover:shadow-inner">
+              <img
+                src={`/${s.icon}`}
+                alt={s.title}
+                className="w-12 h-12 object-contain"
+              />
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-5 tracking-tight">
+                {s.title}
+              </h3>
+              <p className="text-gray-500 leading-relaxed text-md px-4">
+                {s.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const Pricing = () => (
+  <section
+    className="py-32 bg-gray-50/50"
+    style={{ fontFamily: "Inter, sans-serif" }}
+  >
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="text-center mb-10">
+        <h2 className="text-5xl font-semibold text-gray-900 mb-6 tracking-tighter">
+          Simple, Transparent Pricing
+        </h2>
+        <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          Choose the plan that fits your needs. Map local current plan for more
+          details.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
+        <div className="bg-white p-12 rounded-2xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 relative group overflow-hidden shadow-sm grow flex flex-col">
+          <div className="mb-4">
+            <h3 className="text-2xl font-black text-gray-900 mb-2">Starter</h3>
+            <p className="text-gray-400 font-bold text-sm">
+              Perfect for simple product start
+            </p>
+          </div>
+          <div className="mb-4">
+            <span className="text-4xl font-semibold text-gray-900">$0</span>
+            <span className="text-gray-400 font-bold ml-1 text-lg">/Month</span>
+          </div>
+          <div className="space-y-3 mb-6 grow">
+            {[
+              "Access to 10 products",
+              "Basic templates",
+              "Community support",
+              "Single user account",
+            ].map((f, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 text-[15px] text-gray-500"
+              >
+                <svg
+                  className="w-5 h-5 text-green-500 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={4}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                {f}
+              </div>
+            ))}
+          </div>
+          <button
+            className="btn bg-linear-to-r from-blue-700 to-purple-700 
+hover:from-purple-600 hover:to-pink-500 btn-block rounded-full h-14 text-white shadow-xl shadow-primary/20 border-none font-bold text-lg hover:shadow-2xl transition-all"
+          >
+            Get Started Now
+          </button>
+        </div>
+
+        <div className="bg-primary p-1 rounded-2xl relative grow flex flex-col z-10 shadow-3xl shadow-primary/40 hover:shadow-xl transition-all duration-300 group">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-yellow-100 text-[#BB4D00] px-5 py-2 rounded-full text-md font-semibold shadow-xl">
+            Most Popular
+          </div>
+          <div className="bg-primary p-11 rounded-[3rem] h-full flex flex-col text-white">
+            <div className="mb-4">
+              <h3 className="text-2xl font-black mb-2">Pro</h3>
+              <p className="text-white/70 font-bold text-sm">
+                For independent creators
+              </p>
+            </div>
+            <div className="mb-4">
+              <span className="text-4xl font-semibold">$29</span>
+              <span className="text-white/70 font-bold ml-1 text-lg">
+                /Month
+              </span>
+            </div>
+            <div className="space-y-3 mb-6 grow">
+              {[
+                "Access to all premium tools",
+                "Unlimited templates",
+                "Priority support",
+                "Unlimited projects",
+                "Cloud sync",
+                "Advanced analytics",
+              ].map((f, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 text-[15px] text-white/90"
+                >
+                  <svg
+                    className="w-5 h-5 text-white shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={4}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {f}
+                </div>
+              ))}
+            </div>
+            <button className="btn bg-white text-primary border-none hover:bg-gray-50 rounded-full h-14 btn-block shadow-2xl font-bold text-lg px-8">
+              Start Free Trial
+            </button>
+          </div>
+        </div>
+
+        <div className="bg-white p-12 rounded-2xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 relative group overflow-hidden shadow-sm grow flex flex-col">
+          <div className="mb-4">
+            <h3 className="text-2xl font-black text-gray-900 mb-2">
+              Enterprise
+            </h3>
+            <p className="text-gray-400 font-bold text-sm">
+              For team and professionals
+            </p>
+          </div>
+          <div className="mb-4">
+            <span className="text-4xl font-semibold text-gray-900">$99</span>
+            <span className="text-gray-400 font-bold ml-1 text-lg">/Month</span>
+          </div>
+          <div className="space-y-3 mb-6 grow">
+            {[
+              "Everything in Pro",
+              "Unlimited users",
+              "Customizations",
+              "Personal content",
+              "Admin panel",
+              "Custom branding",
+            ].map((f, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 text-[15px] text-gray-500"
+              >
+                <svg
+                  className="w-5 h-5 text-green-500 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={4}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                {f}
+              </div>
+            ))}
+          </div>
+          <button
+            className="btn bg-linear-to-r from-blue-700 to-purple-700 
+hover:from-purple-600 hover:to-pink-500 btn-block rounded-full h-14 text-white shadow-xl shadow-primary/20 border-none font-bold text-lg hover:shadow-2xl transition-all"
+          >
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const CTA = () => (
   <section
     className="bg-linear-to-r from-blue-700 to-purple-600"
     style={{ fontFamily: "Inter, sans-serif" }}
   >
     <div className="px-8 py-20 md:p-24 text-center text-white relative overflow-hidden group shadow-3xl shadow-primary/50">
-      <h2 className="text-2xl md:text-6xl font-extrabold mb-8 relative z-10 tracking-tighter leading-tight">
+      <h2 className="text-4xl font-extrabold mb-8 relative z-10 tracking-tighter leading-tight">
         Ready To Transform Your Workflow?
       </h2>
       <p className="text-primary-content text-lg mb-8 max-w-2xl mx-auto relative z-10 opacity-90 leading-relaxed">
@@ -165,7 +402,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
         <div className="lg:col-span-2">
           <a className="text-3xl font-black text-white mb-8 block">DigiTools</a>
-          <p className="text-white/40 leading-relaxed font-bold text-base max-w-sm mb-10">
+          <p className="text-white/40 leading-relaxed text-base max-w-sm mb-10">
             Access premium AI tools, design assets, and statistics and
             productivity software all in one place. Start creating today for
             free.
@@ -185,7 +422,7 @@ const Footer = () => (
           <h4 className="font-black mb-8 text-[11px] uppercase tracking-[0.2em] text-white">
             Product
           </h4>
-          <ul className="space-y-5 text-white/40 font-bold text-sm">
+          <ul className="space-y-5 text-white/40 text-sm">
             <li>
               <a className="hover:text-primary transition-colors cursor-pointer">
                 Features
@@ -212,7 +449,7 @@ const Footer = () => (
           <h4 className="font-black mb-8 text-[11px] uppercase tracking-[0.2em] text-white">
             Company
           </h4>
-          <ul className="space-y-5 text-white/40 font-bold text-sm">
+          <ul className="space-y-5 text-white/40 text-sm">
             <li>
               <a className="hover:text-primary transition-colors cursor-pointer">
                 About
@@ -239,7 +476,7 @@ const Footer = () => (
           <h4 className="font-black mb-8 text-[11px] uppercase tracking-[0.2em] text-white">
             Resources
           </h4>
-          <ul className="space-y-5 text-white/40 font-bold text-sm">
+          <ul className="space-y-5 text-white/40 text-sm">
             <li>
               <a className="hover:text-primary transition-colors cursor-pointer">
                 Documentation
@@ -288,6 +525,8 @@ export default function App() {
       <main>
         <Hero />
         <Stats />
+        <Steps />
+        <Pricing />
         <CTA />
       </main>
       <Footer />
