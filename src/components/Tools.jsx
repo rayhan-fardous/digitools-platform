@@ -21,17 +21,17 @@ const Tools = ({
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-semibold text-gray-900 mb-6 tracking-tighter  text-center w-full block">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6 tracking-tighter  text-center w-full block">
             Premium Digital Tools
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed text-center block mb-8">
             Choose from our curated collection of premium digital products
             designed to boost your productivity and creativity.
           </p>
-          <div className="inline-flex justify-center gap-2 mt-6 p-1.5 rounded-full bg-white border border-gray-100/80 shadow-sm">
+          <div className="inline-flex justify-center gap-2 mt-6 p-1.5 rounded-full bg-white border border-gray-100/80 shadow-sm flex-wrap w-full md:w-auto">
             <button
               onClick={() => setActiveTab("products")}
-              className={`rounded-full px-8 h-12 font-bold text-sm transition-all ${
+              className={`rounded-full px-6 h-10 md:px-8 md:h-12 font-bold text-xs md:text-sm grow md:grow-0 transition-all ${
                 activeTab === "products"
                   ? "bg-linear-to-r from-blue-700 to-purple-600 text-white shadow-md"
                   : "bg-transparent text-gray-500 hover:text-white hover:bg-linear-to-r hover:from-purple-600 hover:to-pink-500"
@@ -41,7 +41,7 @@ const Tools = ({
             </button>
             <button
               onClick={() => setActiveTab("cart")}
-              className={`rounded-full px-8 h-12 font-bold text-sm transition-all ${activeTab === "cart" ? "bg-linear-to-r from-blue-700 to-purple-600 text-white shadow-md" : "bg-transparent text-gray-500 hover:text-white hover:bg-linear-to-r hover:from-purple-600 hover:to-pink-500"}`}
+              className={`rounded-full px-6 h-10 md:px-8 md:h-12 font-bold text-xs md:text-sm grow md:grow-0 transition-all ${activeTab === "cart" ? "bg-linear-to-r from-blue-700 to-purple-600 text-white shadow-md" : "bg-transparent text-gray-500 hover:text-white hover:bg-linear-to-r hover:from-purple-600 hover:to-pink-500"}`}
             >
               Cart ({cart.length})
             </button>

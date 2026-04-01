@@ -1,16 +1,42 @@
-# React + Vite
+# 🚀 DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DigiTools is a premium digital marketplace for AI tools and productivity apps. It provides users with access to modern digital solutions designed to enhance workflow, creativity, and efficiency.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+🔗 [Visit DigiTools](https://digitools-platform55.netlify.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React  
+- ⚡ Vite  
+- 🎨 Tailwind CSS  
+- 🌼 DaisyUI  
+- 🎯 React Icons  
+- 🔔 React Toastify  
+
+---
+
+## ✨ Features
+
+- 🛒 **Dynamic Cart System**  
+  Add, remove, and manage products seamlessly.
+
+- 📱 **Fully Responsive Design**  
+  Optimized for mobile, tablet, and desktop devices.
+
+- 🔔 **Toast Notifications**  
+  Beautiful and interactive pop-up messages for user actions.
+
+- ⚡ **Fast Performance**  
+  Built with Vite for lightning-fast load times.
+
+- 🎨 **Modern UI/UX**  
+  Clean and user-friendly interface using Tailwind & DaisyUI.
+
+---
+

@@ -79,9 +79,9 @@ const ToolCard = ({ product, onAddToCart, isInCart }) => {
       <button
         onClick={handleBuy}
         disabled={isInCart}
-        className={`btn btn-block rounded-full h-14 font-bold border-none text-white transition-all ${
+        className={`btn btn-block rounded-full h-12 md:h-14 font-bold border-none text-white transition-all ${
           isInCart || added
-            ? "bg-green-500 hover:bg-green-600 disabled:bg-green-500 disabled:text-white disabled:opacity-75 cursor-default"
+            ? "bg-green-500 hover:bg-green-600 disabled:bg-green-500 disabled:text-white text-sm md:text-base disabled:opacity-75 cursor-default"
             : "btn-primary bg-linear-to-r! from-blue-700! to-purple-600! hover:from-purple-600! hover:to-pink-500!"
         } group-hover:shadow-xl group-hover:shadow-primary/30`}
       >
