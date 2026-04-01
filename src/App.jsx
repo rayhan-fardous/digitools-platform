@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   FaBullhorn,
   FaCartShopping,
@@ -10,6 +11,9 @@ import {
   FaPenNib,
   FaXTwitter,
 } from "react-icons/fa6";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import productsData from './products.json';
 
 const Navbar = () => (
   <nav
@@ -41,6 +45,9 @@ const Navbar = () => (
       </ul>
     </div>
     <div className="navbar-end gap-3">
+      <button className="btn btn-ghost btn-circle text-gray-600">
+        <FaCartShopping className="text-lg" />
+      </button>
       <a className="btn btn-ghost font-bold rounded-full text-gray-700 hover:text-white">
         Login
       </a>
@@ -63,7 +70,7 @@ const Hero = () => (
   >
     <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
       <div className="lg:w-1/2 text-left">
-        <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-8 ring-1 ring-blue-100 ring-inset tracking-wider">
+        <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold mb-8 ring-1 ring-primary/20 ring-inset tracking-wider">
           New: AI-Powered Tools Available
         </div>
         <h1 className="text-6xl font-black leading-[1.1] mb-8 tracking-tighter text-gray-900">
@@ -102,7 +109,7 @@ hover:scale-105 transition-all duration-300"
         <img
           src="/banner.png"
           alt="Hero Illustration"
-          className="w-full rounded-xl shadow-xl skew-y-1 hover:skew-y-0 transition-transform duration-1000"
+          className="w-full rounded-xl shadow-xl transition-transform duration-1000"
         />
       </div>
     </div>
@@ -271,8 +278,7 @@ hover:from-purple-600 hover:to-pink-500 rounded-full px-10 h-14 text-white shado
             >
               Products
             </button>
-            <button className="btn btn-ghost rounded-full px-10 h-14 text-gray-400 font-black hover:text-white transition-colors">
-              Cart
+            <button className="btn btn-ghost rounded-full px-10 h-14 text-gray-400 font-black hover:text-black transition-colors hover:bg-primary/5">Cart(0)
             </button>
           </div>
         </div>
